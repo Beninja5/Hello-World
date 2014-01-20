@@ -9,4 +9,18 @@
 		socket.emit('started', { text: 'client started' });
 	});
 
+
+    $('.send').on('click', function () {
+
+        var input = $('.input-field').val();
+
+        socket.emit('message', { msg: input });
+
+    });
+
+    socket.on('chat', function (data) {
+
+        $('.chat').append('<p>' + data.msg + '</p>');
+    });
+
 })();

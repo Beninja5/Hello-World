@@ -21,8 +21,9 @@ io.sockets.on('connection', function (socket) {
 		console.log(data.text);
 	});
 
-    socket.on('move', function (data) {
+    socket.on('message', function (data) {
 
-        socket.emit('move');
+        console.log(data);
+        io.sockets.emit('chat', data);
     });
 });
