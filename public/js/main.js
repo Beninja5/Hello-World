@@ -1,7 +1,7 @@
 (function(){
 
 	//var socket = io.connect('http://localhost'), //DEV
-    var socket = io.connect('192.241.162.182'), //PRODUCTION 
+    var socket = io.connect('hello-world.codecollective.io'), //PRODUCTION 
         title = $('h1');
 
 	socket.on('start', function (data) {
